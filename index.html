@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="media/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/d8b17351f4.js" crossorigin="anonymous"></script>
+    
+    <title>Generate Frame</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    
+                </div>
+                <div class="nav">
+                    <span id="dark"><i class="fas fa-moon"></i></span>
+                    <span id="light" class="active"><i class="fas fa-sun"></i></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="image-generate">
+        <div class="container">
+            <div class="generator-wrapper">
+                <div class="image-generate-container">
+                    <div class="header">
+                        <div class="frame-input">
+                            <input type="file" name="frame" id="frame">
+                            <label for="frame"><i class="fas fa-crop-alt"></i><span>Upload Frame</span></label>
+                        </div>
+                        <div class="image-input">
+                            <input type="file" name="image" id="iamge">
+                            <label for="iamge"><i class="fas fa-cloud-upload"></i><span>Upload Image</span></label>
+                        </div>
+                    </div>
+                    <div class="body" onmousedown="mouse_down(event)" onmouseup= "mouse_up(event)"  onmouseenter="mouse_enter()" onmouseleave="mouse_leave()" >
+                        <img id="myimage" src="" alt="" draggable="false">
+                        <img id="frameimage" src="" alt="" draggable="false">
+                    </div>
+                    <div class="edit-container">
+                        <div class="range">
+                            <span>Zoom</span>
+                            <input id="range" type="range" min="10" max="40" value="10" onmousemove="resize()" onmousedown="hideFooter()">
+                        </div>
+                        <div class="confirm-change">
+                            <button onclick="enableDownload()">Edit Done</button>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <a class="btn" id="download" href="javascript:void(0);"><i class="fas fa-download"></i> Download</a>
+                        <div class="social-share">
+                            <span>Share On:</span>
+                            <div class="icons">
+                                <span><i class="fab fa-facebook"></i></span>
+                                <span><i class="fab fa-facebook-messenger"></i></span>
+                                <span><i class="fab fa-instagram-square"></i></span>
+                                <span><i class="fab fa-twitter-square"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dispaly">
+
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/html2canvas.min.js"></script>
+</body>
+</html>
