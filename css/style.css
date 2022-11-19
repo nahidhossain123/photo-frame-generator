@@ -115,6 +115,7 @@ header{
 .image-generate-container{
     max-width: 600px;
     width: 100%;
+    margin-block: 0.5rem;
 }
 .image-generate-container .body{
     height: 600px;
@@ -194,6 +195,7 @@ header{
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
+    flex-wrap: wrap;
 }
 .social-share > span{
     color: #FFF;
